@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ChuckNorrisJokesGenerator.MainPage" 
+             BackgroundColor="Black"
+             Title="Chucky Jokes"
+             IconImageSource="icon.png">
+
+    <StackLayout>
+        
+        <!-- Place new controls here -->
+        <Label Text="Chuck Norris Jokes" 
+               FontSize="Title"
+               TextColor="WhiteSmoke"
+             HorizontalOptions="Center"
+        />
+        <Image Source="images.jpg"/>
+        <Label x:Name="JokeLabel" HeightRequest="200" TextColor="black" FontSize="Medium" VerticalOptions="CenterAndExpand" Margin="5" BackgroundColor="White"/>
+        
+        <Button x:Name="JokeButton"  BackgroundColor="White" Text="Tap here!" TextColor="Black" CornerRadius="200" Clicked="JokeButton_Clicked" VerticalOptions="CenterAndExpand"/>
+
+        <Button x:Name="CatorgoryButton" Text="Catorgories" Clicked="CatorgoryButton_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

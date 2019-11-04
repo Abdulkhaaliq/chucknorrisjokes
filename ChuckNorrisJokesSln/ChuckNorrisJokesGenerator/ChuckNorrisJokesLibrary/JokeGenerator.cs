@@ -20,19 +20,6 @@ namespace ChuckNorrisJokesLibrary
 
             return joke.value;
         }
-
-        public async Task<string> GetSpecifiedJoke(string category)
-        {
-            var client = new HttpClient();
-
-            string specifiedJokeString = await client.GetStringAsync("https://api.chucknorris.io/jokes/random?category=" + category);
-            
-
-            var joke = JsonConvert.DeserializeObject<Joke>(specifiedJokeString);
-
-            return joke.value;
-        }
-
         public async Task<string[]> GetCategories()
          {
               HttpClient client = new HttpClient();

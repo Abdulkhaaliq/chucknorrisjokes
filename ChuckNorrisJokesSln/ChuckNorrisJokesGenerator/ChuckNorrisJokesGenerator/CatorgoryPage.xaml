@@ -1,0 +1,27 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ChuckNorrisJokesGenerator.CategoryPage"
+             BackgroundColor="Black"
+             Title="Catorgories">
+
+    <ListView ItemsSource="{Binding Categories}" ItemTapped="ListView_ItemTapped">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <Frame BorderColor="Indigo"
+                               CornerRadius="15">
+
+                            <StackLayout>
+                            <Label Text="{Binding .}"  TextColor="black" FontSize="Medium"/>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
